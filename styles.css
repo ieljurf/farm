@@ -1,7 +1,9 @@
 /* -------------------- IMPORTED FONTS -------------------------------------- */
+
 @import url('https://fonts.googleapis.com/css2?family=Habibi&family=Irish+Grover&display=swap');
 
 /*-------------------- CSS RESET --------------------------------------------*/
+
 * {
   margin: 0;
   padding: 0;
@@ -9,6 +11,7 @@
 }
 
 /* -------------------- ROOT VARIABLES --------------------------------------- */
+
 :root {
   --green: #06A816;
   --orange: #E75D02;
@@ -20,6 +23,7 @@
 }
 
 /* -------------------- GLOBAL STYLES (mobile first/small) ------------------- */
+
 body {
   font-family: 'Habibi', serif;
   color: var(--black);
@@ -30,56 +34,108 @@ h1, h2, h3 {
   font-family: 'Irish Grover', cursive;
 }
 
-header, footer {
-  text-align: center;
-  padding: 1em;
-  background-color: var(--green);
-  color: var(--white);
+/* -------------------- FRUITS & VEGETABLE STYLES ------------------------ */
+
+#fruits, #vegetables {
+    padding-left: 20px; 
+    padding-right: 20px; 
+  }
+
+#fruits h2, #vegetables h2 {
+    margin-top: 30px; 
+    margin-bottom: 15px;
+  }
+  
+  #fruits h4, #vegetables h4 {
+    font-family: 'Irish Grover', cursive;
+    font-size: 1.5em; 
+    font-weight: normal; 
+    text-align: center; 
+    margin-top: 10px; 
+    margin-bottom: 1px; 
+  }
+  
+  #fruits p, #vegetables p {
+    font-size: 0.9em;
+    margin-top: 20px; 
+    margin-bottom: 20px; 
+    line-height: 1.6; 
+  }
+
+/* -------------------- HEADER STYLES -------------------------------------- */
+
+header {
+    text-align: left;
+    padding: 1em 2px 3em 2px;
+    background-color: var(--green);
+    color: var(--white);
+  }
+  
+  header h1 {
+    font-size: var(--h1-size);
+    text-shadow: 2px 2px 4px var(--black); 
+    margin-left: 20px; 
+  }
+  
+  header p {
+    font-style: italic;
+    margin-left: 20px; 
+    font-size: 1em;
+    margin-top: 10px;
+  }
+
+/* -------------------- BUTTON STYLES -------------------------------------- */
+.nav-buttons {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: -50px; 
+    margin-right: 20px;
+    flex-wrap: wrap;
 }
 
-header h1 {
-  font-size: var(--h1-size);
+.nav-buttons .button-link {
+    background-color: var(--orange);
+    color: var(--white);
+    border: 1.5px solid var(--white);
+    padding: 5px 100px;
+    margin-left: 10px;
+    font-size: 0.9em;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+    text-decoration: none; 
+    display: inline-block; 
 }
 
-nav ul {
-  display: flex;
-  justify-content: center;
-  list-style: none;
-  background-color: var(--orange);
-  padding: 0.5em;
-}
-
-nav ul li {
-  margin: 0 1em;
-}
-
-nav ul li a {
-  text-decoration: none;
-  color: var(--white);
-  font-weight: bold;
+.nav-buttons .button-link:hover {
+    background-color: var(--white);
+    color: var(--orange);
 }
 
 /* -------------------- GRID STYLES --------------------------------------- */
+
 .grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1em;
-  padding: 1em;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 0;
+  padding-bottom: 20px;
 }
 
 .grid img {
   max-width: 100%;
-  height: auto;
+  height: 100%;
   border-radius: 0;
+  object-fit: cover;
 }
 
 /* -------------------- IMAGE CONTAINER & LABELS STYLES ---------------------- */
+
 .image-container {
   position: relative;
   display: inline-block;
   width: 250px; 
   height: 250px;
-  margin: 10px;
+  margin: 20px;
 }
 
 .image-container img {
@@ -104,26 +160,179 @@ nav ul li a {
   white-space: nowrap;
 }
 
-/* -------------------- FOOTER STYLES ----------------------------------------*/
-footer ul {
-  list-style: none;
+/* -------------------- FOOTER STYLES ---------------------------------------- */
+
+footer {
+    background-color: var(--green); 
+    padding: 30px 20px;
+    color: var(--white);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .footer-container {
+    display: flex;
+    justify-content: space-between; 
+    width: 100%;
+    margin-bottom: 20px; 
+  }
+  
+ 
+  .footer-left {
+    display: flex;
+    flex-direction: row; 
+    align-items: flex-start;
+    padding-right: 50px; 
+    margin-left: 100px;
+    padding-top: 50px;
+  }
+  
+  .footer-left h2 {
+    margin-right: 20px;
+  }
+  
+  .footer-address {
+    display: flex;
+    flex-direction: column; 
+    margin-top: -50px;
+  }
+  
+  .footer-address p {
+    padding: 5px 0; 
+    margin-right: 0px; 
+    margin-left: 150px; 
+}
+  
+
+.footer-right {
+    display: flex;
+    flex-direction: row; 
+    align-items: flex-start; 
+  }
+  
+  .footer-hours {
+    display: flex;
+    flex-direction: column; 
+    margin-right: 200px; 
+    margin-left: 10px; 
+}
+  
+  .footer-hours h2 {
+    margin: 0;
+    font-size: var(--h2-size); 
+    padding-bottom: 10px; 
+    padding-top: 50px;
+  }
+  
+  .hours-times {
+    display: flex;
+    flex-direction: column; 
+  }
+  
+  .hours-times p {
+    margin-right: 100px;
+    padding: 5px 0; 
+  }  
+  
+  
+  .copyright {
+    text-align: center;
+    color: var(--green);
+    margin-top: 3px; 
+    margin-bottom: 5px;
+  }
+  
+  /* -------------------- SCROLL TO TOP BUTTON STYLES -------------------- */
+
+  .scroll-to-top {
+    position: fixed;
+    bottom: 20px;  
+    right: 20px;   
+    background-color: var(--orange);
+    color: var(--white); 
+    padding: 10px 10px;
+    border: 2px solid var(--white); 
+    border-radius: 5px; 
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.1em;
+    cursor: pointer;
+    text-decoration: none; 
+    transition: background-color 0.3s ease;
+  }
+  
+  .scroll-to-top:hover {
+    background-color: var(--white);
+    color: var(--orange); 
+  }
+
+/* -------------------- MEDIA QUERY FOR SMALL SCREENS (below 428px) -------------------- */
+
+@media (max-width: 427px) {
+
+    .nav-buttons {
+        flex-direction: column; 
+        align-items: center; 
+        justify-content: center;
+    }
+
+    .nav-buttons button {
+        width: 100%; 
+        margin: 10px 0; 
+    }
+
+   
+    .grid {
+        grid-template-columns: 1fr; 
+    }
+
+    .grid img {
+        width: 100%; 
+    }
+
+    
+    footer {
+        flex-direction: column; 
+        text-align: center; 
+    }
+
+    .footer-container {
+        flex-direction: column; 
+        width: 100%; 
+    }
+
+   
+    .footer-left,
+    .footer-right {
+        margin-left: 0; 
+        margin-right: 0;
+        padding-top: 10px; 
+        align-items: center; 
+    }
+
+    .footer-address,
+    .footer-hours {
+        margin-top: 10px; 
+    }
 }
 
-/*-------------------- MEDIA QUERY (medium) ----------------------------------*/
+/* -------------------- MEDIA QUERY (medium screens) -------------------- */
+
 @media (min-width: 834px) {
   .grid {
     grid-template-columns: 1fr 1fr 1fr;
   }
 }
 
-/*-------------------- MEDIA QUERY (large) ----------------------------------*/
+/* -------------------- MEDIA QUERY (large screens) -------------------- */
 @media (min-width: 1280px) {
   .grid {
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 }
 
-/*-------------------- MEDIA QUERY (xl) -------------------------------------*/
+/* -------------------- MEDIA QUERY (extra large screens) -------------------- */
 @media (min-width: 1440px) {
   body {
     font-size: 1.25em;
